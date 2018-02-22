@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox id="HBox" spacing="5" alignment="CENTER" prefHeight="60" prefWidth="150" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.OpenDialogViewController"  xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <Label fx:id="lblOpeningBalance" text="Opening Balance: "  styleClass="text-large" />
+        <TextField fx:id="openingBalanceField" alignment="CENTER_RIGHT"  prefHeight="42.0" prefWidth="50.0" styleClass="text-large" />
+    </children>
+</HBox>

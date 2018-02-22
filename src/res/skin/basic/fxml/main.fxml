@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:id="main" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.MainViewController"
+            prefWidth="800" prefHeight="600" styleClass="main">
+    <top>
+        <FlowPane prefWidth="800" prefHeight="64.0" styleClass="header" 
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>        
+                <fx:include source="main_button_icon.fxml" fx:id="buttonZoutReport" styleClass="icon, icon-zout" onAction="#doZout" />
+                <fx:include source="main_button_icon.fxml" fx:id="buttonOpenclose" styleClass="icon, icon-open-close" onAction="#doOpenClose" />
+                <fx:include source="main_button_icon.fxml" fx:id="buttonLogout" styleClass="icon, icon-logout" onAction="#logout" />        
+            </children>
+        </FlowPane>
+    </top>
+</BorderPane>

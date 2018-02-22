@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="POSXPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.tecnooc.desktop.app.posx.model.CreditCard</class>
+    <class>com.tecnooc.desktop.app.posx.model.CreditCardRange</class>
+    <class>com.tecnooc.desktop.app.posx.model.Currency</class>
+    <class>com.tecnooc.desktop.app.posx.model.CurrencyDenomination</class>
+    <class>com.tecnooc.desktop.app.posx.model.Customer</class>
+    <class>com.tecnooc.desktop.app.posx.model.DocSequence</class>
+    <class>com.tecnooc.desktop.app.posx.model.Inventory</class>
+    <class>com.tecnooc.desktop.app.posx.model.Invoice</class>
+    <class>com.tecnooc.desktop.app.posx.model.InvoiceItem</class>
+    <class>com.tecnooc.desktop.app.posx.model.InvoiceTender</class>
+    <class>com.tecnooc.desktop.app.posx.model.Store</class>
+    <class>com.tecnooc.desktop.app.posx.model.Terminal</class>
+    <class>com.tecnooc.desktop.app.posx.model.User</class>
+    <class>com.tecnooc.desktop.app.posx.model.Zout</class>
+    <class>com.tecnooc.desktop.app.posx.model.ZoutCurrency</class>
+    <class>com.tecnooc.desktop.app.posx.model.ZoutTender</class>
+    <class>com.tecnooc.desktop.app.posx.model.Tender</class>
+    <class>com.tecnooc.desktop.app.posx.model.Shortcut</class>
+    <class>com.tecnooc.desktop.app.posx.model.Application</class>
+    <class>com.tecnooc.desktop.app.posx.model.ApplicationPreferenceValue</class>
+    <class>com.tecnooc.desktop.app.posx.model.InventoryNumber</class>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

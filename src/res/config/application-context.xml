@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+    
+    <!-- Dependency Injection with annotations(usually to find all controllers) -->   
+    <context:component-scan base-package="
+                com.tecnooc.desktop.app.posx,
+                com.tecnooc.desktop.app.posx.dto,
+                com.tecnooc.desktop.app.posx.manager,
+                com.tecnooc.desktop.app.posx.service,
+                com.tecnooc.desktop.app.posx.service.impl" /> 
+        
+    <!-- This will pickup all @Transactional annotations-->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    
+    <!-- database config files-->
+    <import resource="datasource.xml"/>
+    <import resource="hibernate.xml"/>
+
+    <jpa:repositories base-package="com.tecnooc.desktop.app.posx.repository" />
+</beans>

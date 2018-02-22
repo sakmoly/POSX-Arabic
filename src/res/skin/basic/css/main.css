@@ -1,0 +1,475 @@
+/* UI Components Base Styles */
+.text-field {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-radius: 0, 0, 0;
+    -fx-padding: 3 5 3 5;
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-font-family: "Cantarell", sans-serif;
+    -fx-cursor: text;
+}
+
+.text-area {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-radius: 0, 0, 0;
+    -fx-padding: 3 5 3 5;
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-font-family: "Cantarell", sans-serif;
+    -fx-cursor: text;
+    -fx-font-size: 14pt;
+}
+
+.read-only {
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0;
+    -fx-background-color: #E2E3DB;
+    -fx-font-family: "Cantarell", sans-serif;
+    -fx-text-fill: black;
+}
+
+.label {
+    -fx-font-family: "Cantarell", sans-serif;
+}
+
+.table-view{
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header {
+
+    -fx-font-size: 15px;
+    -fx-size: 40;
+    -fx-border-style: solid;
+    -fx-border-color: #DBE2E3;
+
+}
+.table-view .column-header-background {
+    -fx-background-color: #DBE2E3;   
+}
+.table-row-cell:odd {
+    -fx-background-color: #ECF7FA;
+}
+.table-cell{
+    -fx-alignment : CENTER-RIGHT;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: #cce3f4; 
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollBar                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-bar .thumb{
+    -fx-background-color: #cdcdcd;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-color: #dadada;
+}
+
+/* The following is not working. Maybe related to RT-10521*/
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #606060;
+}
+
+
+.scroll-bar .track {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.scroll-bar .track-background {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0.25em; /* 3 */
+}
+
+.scroll-bar .increment-button:hover, .scroll-bar .decrement-button:hover  {
+    -fx-background-color: #dadada;
+}
+
+.scroll-bar .increment-button:pressed, .scroll-bar .decrement-button:pressed {
+    -fx-background-color: #606060;
+}
+
+.scroll-bar:vertical .increment-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+}
+
+.scroll-bar .increment-button:pressed .increment-arrow {
+    -fx-background-color: white, white;
+}
+.scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+}
+
+.scroll-bar .decrement-button:pressed .decrement-arrow {
+    -fx-background-color: white, white;
+}
+
+.scroll-bar:disabled {
+    -fx-opacity: 0.4;
+}
+
+.toggle-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0;
+
+    -fx-background-color: #cccccc;
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: black;
+}
+.toggle-button:focused {
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-style: segments(1, 1);
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
+}
+
+.toggle-button:hover {
+    -fx-background-color: #d8d8d8;
+    -fx-text-fill: black;
+}
+
+.toggle-button:selected {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected:hover {
+    -fx-background-color: #666;
+    -fx-text-fill: white;
+}
+
+.toggle-button:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+/* When the list-cell is selected and focused */
+.list-view:focused .list-cell:filled:focused:selected {
+    -fx-background-color: #cce3f4;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: black;
+}
+
+/* When the list-cell is selected and selected-hovered but not focused. 
+    Applied when the multiple items are selected but not focused */
+.list-view:focused .list-cell:filled:selected, .list-view:focused .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: #cce3f4;
+    -fx-text-fill: black;
+}
+
+/* When the list-cell is selected, focused and mouse hovered */
+.list-view:focused .list-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: #cce3f4;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+}
+
+/* icons */
+.icon {
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:  #FFFFFF;  
+}
+
+.icon-logout {
+    -fx-background-image: url("../image/icon_logout.png");      
+}
+.icon-xout {
+    -fx-background-image: url("../image/icon_xout.png");  
+}
+.icon-zout {
+    -fx-background-image: url("../image/icon_zout.png");  
+}
+.icon-open-close {
+    -fx-background-image: url("../image/icon_open-close.png");  
+}
+
+.icon-remove {
+    -fx-background-image: url("../image/icon_remove.png");  
+}
+
+.icon-new {
+    -fx-background-image: url("../image/icon_new.png");  
+}
+
+.icon-save {
+    -fx-background-image: url("../image/icon_save.png");  
+}
+
+.icon-print {
+    -fx-background-image: url("../image/icon_print.png");  
+}
+
+.icon-pdf {
+    -fx-background-image: url("../image/icon_pdf.png");  
+}
+
+.icon-backspace {
+    -fx-background-image: url("../image/icon_backspace.png");  
+}
+
+.icon-enter {
+    -fx-background-image: url("../image/icon_enter.png");  
+}
+
+/* Login View */
+.login {
+   -fx-background-color: #f0f0f0;
+}
+
+.login .container{
+   -fx-background-image: url("../image/login_background.png");  
+}
+
+.login .button {
+    -fx-background-color: #0088aa;
+    -fx-text-fill: white;
+}
+
+.login .normal {
+   -fx-text-fill: #333333;
+}
+
+.login .error {
+    -fx-text-fill: red;
+}
+
+/* login old
+.login {
+}
+
+.login .header {
+    -fx-padding: 20;
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #0087BE 0%, #26ADE4 100%);
+    -fx-text-fill: white;
+}
+
+.login .header .title {
+    -fx-font: 18pt "Cantarell";
+}
+
+.login .form {
+    -fx-padding: 40 0 0 0;
+}
+
+.login .form .title {
+    -fx-font: 18pt "Cantarell";
+}
+
+.login .form .error {
+    -fx-text-fill: #ff0000;
+}
+*/
+
+/* dialog */
+
+.dialog {
+    -fx-background-color: rgba(0,0,0,0.75);
+}
+
+.dialog .container {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, white, 10, 0.0, 0.0, 0.0);
+}
+
+.dialog .title {
+    -fx-padding: 10px 40px 10px 40px;
+    -fx-background-color: #e6e6e6;
+    -fx-text-fill: #666666;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.dialog .messageLabel {
+    -fx-text-fill: #4d4d4d;
+}
+
+.dialog .options {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.dialog .options .button {
+    -fx-text-fill: white;
+    -fx-background-color: #26ade4;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* old styles
+.dialog {
+    -fx-border-style: solid;
+    -fx-border-color: #00477E;
+    -fx-border-width:3px;
+}
+
+.dialog .header {
+    -fx-background-color: #0087BE;
+}
+
+.dialog .header .label {
+    -fx-background-color: #0087BE; 
+    -fx-text-fill: #ffffff; 
+    -fx-font-size: 14pt; 
+    -fx-font-weight: bold;
+}
+
+.dialog .footer {
+    -fx-background-color: #0087BE;
+}
+
+.dialog .footer .button {
+    -fx-text-fill: #000000; 
+    -fx-background-repeat: no-repeat; 
+    -fx-background-position: center; 
+    -fx-background-color: #FFFFFF;
+}
+
+*/
+
+/* main view */
+.main {    
+    -fx-background-image: url("../image/background.png");
+    -fx-background-position: left top, center;
+    -fx-background-repeat: repeat;
+}
+
+.main .header {    
+    -fx-background-color: #0087BE;
+    -fx-alignment :center-right;
+    -fx-hgap: 8;
+    -fx-padding: 8;
+}
+
+/* receipt view */
+.receipt .header {
+    -fx-background-color: #26ADE4;      
+    -fx-alignment :center-right;
+}
+
+.receipt .footer {
+    -fx-background-color: #ADE426;      
+    -fx-alignment :center-right;
+    -fx-hgap: 12;
+}
+
+.receipt .header .bold {
+    -fx-font-weight: bold;
+}
+
+.receipt .footer .bold {
+    -fx-text-fill: #000;
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+}
+
+.table-row-bold {
+    -fx-font-weight: bold;
+}
+
+/* numpad */
+
+.numpad .text-field {
+    -fx-font-weight: bold; 
+    -fx-font-size: 15px;
+}
+
+/* Others */
+.detailbox {
+    -fx-background-color: #4DBCE9;      
+}
+
+.detailbox .bold {
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFF;
+}
+
+.bold {
+    -fx-font-weight: bold;
+}
+
+.text-large {
+    -fx-font-size: 15px;
+}
+
+.selected {
+    -fx-background-color: lightsteelblue; 
+}
+
+.session_message {
+    -fx-background-color:  #FFFFFF; 
+    -fx-border-width: 16px;
+    -fx-border-color:#444;
+    -fx-border-style:solid;
+}
+
+/* splash */
+
+.splash{
+    -fx-background-image: url("../image/splash.png");
+    -fx-background-position: left top, center;
+}
+
+/* Licence */
+.licence-header {
+    -fx-background-color: #333;
+    -fx-font-size: 13px;
+}
+
+.licence-header .label {    
+    -fx-text-fill: #ccc;
+    -fx-font-weight: bold;
+}
+
+.licence-logo {
+    -fx-background-image: url("../image/logo_128.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.licence .main .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.licence .main .button {
+    -fx-font-weight: bold;
+}
+
+.licence .disabled {
+    -fx-background-color: #333; 
+    -fx-text-fill: #ccc;
+}

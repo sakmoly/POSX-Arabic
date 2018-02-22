@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.CloseDialogViewController">
+  <bottom>
+    <GridPane hgap="10.0"  vgap="5" style="-fx-padding: 20px;"  >
+      <children>
+        <Label alignment="CENTER_RIGHT" text="Drawer leave amount:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+        <Label alignment="CENTER_RIGHT" text="Deposit Amount" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <TextField fx:id="leaveAmtField" prefHeight="32.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />   
+        <TextField fx:id="depositAmtField" prefHeight="32.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        
+        <Label text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="175.0" minWidth="10.0" prefWidth="130.0" />
+        <ColumnConstraints hgrow="NEVER" maxWidth="80.0" minWidth="10.0" prefWidth="60.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="500.0" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </bottom>
+  <top>
+    <GridPane hgap="10.0" >
+      <children>
+        <Label alignment="CENTER_RIGHT" text="Terminal:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+        <Label alignment="CENTER_RIGHT" text="Opened:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Label text="Enter Quantity of each denomination:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Label fx:id="terminalnameLabel" text="ValueTerminal" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="openDateLabel" text="ValueOpened" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="175.0" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="500.0" minWidth="10.0" prefWidth="150.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </top>
+  <center>
+      <GridPane hgap="10.0" fx:id="currencyGrid" >
+          
+      </GridPane>
+  </center>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="main" prefHeight="520.0" prefWidth="352.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.EditItemViewController">
+  <children>
+    <GridPane prefWidth="338.0" AnchorPane.bottomAnchor="288.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="Customer" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" />
+        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="Store Balance Available" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="Credit Remaining" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="customerLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="storeBalanceLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label fx:id="creditRemainingLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="46.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

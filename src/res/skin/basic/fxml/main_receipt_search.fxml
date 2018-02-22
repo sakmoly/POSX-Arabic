@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" 
+            fx:id="main"  fx:controller="com.tecnooc.desktop.app.posx.controller.impl.SearchItemViewController"
+            prefWidth="352.0" prefHeight="520.0" >
+    <children>
+        <AnchorPane prefWidth="352.0" prefHeight="320.0" 
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                    AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="224.0"
+                    styleClass="detailbox">
+            <children>
+                <TextField fx:id="lookupTextField" 
+                           prefWidth="432.0" prefHeight="48.0" onKeyTyped="#keyTyped" 
+                           AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" 
+                           AnchorPane.topAnchor="16.0" />
+                <ListView fx:id="itemList" onMouseClicked="#addItem"
+                          prefWidth="446.0" prefHeight="232.0" 
+                          AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" 
+                          AnchorPane.topAnchor="80.0" AnchorPane.bottomAnchor="16.0"  />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

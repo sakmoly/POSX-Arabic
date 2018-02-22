@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="522.0" prefWidth="776.0" style="-fx-background-color: #FFFFFF;-fx-border-width: 16px;-fx-border-color:#444;-fx-border-style:solid;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.ZoutViewContoller">
+  <children>
+    <BorderPane fx:id="anchorPaneReportHeader" maxWidth="1.7976931348623157E308" prefHeight="64.0" prefWidth="776.0" style="-fx-background-color:#FFFFF;" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+      <bottom>
+        <Separator prefWidth="200.0" />
+      </bottom>
+      <center>
+        <Label fx:id="lblReportTitle" prefHeight="26.0" text="X-OUT Report">
+          <font>
+            <Font name="System Bold" size="20.0" />
+          </font>
+        </Label>
+      </center>
+      <right>
+          <HBox BorderPane.alignment="CENTER_RIGHT">
+              <fx:include fx:id="buttonExportReport" source="main_button_icon.fxml" onAction="#exportReport" styleClass="icon, icon-pdf" >
+                  <BorderPane.margin>
+                      <Insets right="8.0" />
+                  </BorderPane.margin>
+              </fx:include>
+              <fx:include fx:id="buttonPrintReport" source="main_button_icon.fxml" onAction="#printReport" styleClass="icon, icon-print" >
+                  <BorderPane.margin>
+                      <Insets right="8.0" />
+                  </BorderPane.margin>
+              </fx:include>
+          </HBox>
+      </right>
+    </BorderPane>
+    <!-- *****************Left panel **********************-->
+    <GridPane fx:id="reportLeftPane" prefHeight="580.0" prefWidth="150.0" style="-fx-background-color:#FFFFFF;" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+      <children>
+        <Label fx:id="lblSubsidiary" contentDisplay="RIGHT" prefWidth="150.0" text="Subsidiary    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+        <Label fx:id="lblSubsidiaryValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+        <Label fx:id="lblStore" contentDisplay="RIGHT" prefWidth="150.0" text="Store    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label fx:id="lblStoreValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+        <Label fx:id="lblStation" contentDisplay="RIGHT" prefWidth="150.0" text="Station    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label fx:id="lblStationValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+        <Label fx:id="lblCashier" contentDisplay="RIGHT" prefWidth="150.0" text="Cashier    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Label fx:id="lblCahierValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+        <Label fx:id="lblCreatedBy" contentDisplay="RIGHT" prefWidth="150.0" text="Created By    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <Label fx:id="lblCreatedByValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+        <Label fx:id="lblDateAndTime" contentDisplay="RIGHT" prefWidth="150.0" text="DATE and TIME" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+          <font>
+            <Font name="System Bold" size="15.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="lblFrom" contentDisplay="RIGHT" prefWidth="150.0" text="From    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+        <Label fx:id="lblFromValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+        <Label fx:id="lblTo" contentDisplay="RIGHT" prefWidth="150.0" text="To    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+        <Label fx:id="lblToValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+        <Label fx:id="lblSales" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="SALES" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+        <Label fx:id="lblGross" contentDisplay="RIGHT" prefWidth="150.0" text="Gross    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+        <Label fx:id="lblGrossValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+        <Label fx:id="lblDiscount" contentDisplay="RIGHT" prefWidth="150.0" text="Discount    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+        <Label fx:id="lblDiscountValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+        <Label fx:id="lblNet" contentDisplay="RIGHT" prefWidth="150.0" text="Net    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+        <Label fx:id="lblNetValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" />
+        <Label fx:id="lblReturn" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="RETURN" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+        <Label fx:id="lblRGross" contentDisplay="RIGHT" prefWidth="150.0" text="Gross    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
+        <Label fx:id="lblRGrossValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="13" />
+        <Label fx:id="lblRDiscount" contentDisplay="RIGHT" prefWidth="150.0" text="Discount    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+        <Label fx:id="lblRDiscountValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="14" />
+        <Label fx:id="lblRNet" contentDisplay="RIGHT" prefWidth="150.0" text="Net    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="15" />
+        <Label fx:id="lblRNetValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="15" />
+        <Label fx:id="lblTotal" contentDisplay="RIGHT" prefWidth="150.0" text="Total  :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+        <Label fx:id="lblTotalValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="16" />
+        <Label fx:id="lblReceipt" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="RECEIPT COUNTS" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+        <Label fx:id="lblNoOfTransaction" contentDisplay="RIGHT" prefWidth="150.0" text="No Of Transactions    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="18" />
+        <Label fx:id="lblNoOfTransactionValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
+        <Label fx:id="lblItemCounts" contentDisplay="RIGHT" prefWidth="150.0" text="Item Counts    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+        <Label fx:id="lblItemCountsValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" />
+        <Label fx:id="lblFirstReceiptNo" contentDisplay="RIGHT" prefWidth="150.0" text="First Receipt No    :" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+        <Label fx:id="lblFirstReceiptNoValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="201.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="147.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="22.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="22.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="22.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="22.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+        <RowConstraints maxHeight="18.0" prefHeight="18.0" />
+      </rowConstraints>
+    </GridPane>
+    <!-- *****************Right panel **********************-->
+    <ScrollPane prefHeight="522.0" prefWidth="373.0" style="-fx-background-color:#FFFFFF;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+      <GridPane fx:id="reportRightPane" prefHeight="580.0" prefWidth="373.0" style="-fx-background-color:#FFFFF;">
+        <children>
+          <Label fx:id="lblCollections" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="COLLECTIONS" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+          <Label fx:id="lblCash" contentDisplay="RIGHT" prefWidth="150.0" text="Cash  :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+          <Label fx:id="lblCashValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+          <Label fx:id="lblCreditCardM" contentDisplay="RIGHT" prefWidth="150.0" text="Credit Card - Master    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+          <Label fx:id="lblCreditCardMValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+          <Label fx:id="lblCreditCardV" contentDisplay="RIGHT" prefWidth="150.0" text="Credit Card - Visa    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+          <Label fx:id="lblCreditCardVValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+          <Label fx:id="lblDebitCard" contentDisplay="RIGHT" prefWidth="150.0" text="Debit Card    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+          <Label fx:id="lblDebitCardValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+          <Label fx:id="lblStoreCredit" contentDisplay="RIGHT" prefWidth="150.0" text="Store Credit    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+          <Label fx:id="lblStoreCreditValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+          <Label fx:id="lblCreditSale" contentDisplay="RIGHT" prefWidth="150.0" text="Credit Sale    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+          <Label fx:id="lblCreditSaleValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+          <Label fx:id="lblCurrency" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="CURRENCY" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+          <Label fx:id="lblPaidIn" contentDisplay="RIGHT" prefWidth="150.0" text="Paid In    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
+          <Label fx:id="lblPaidInValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
+          <Label fx:id="lblBegin" contentDisplay="RIGHT" prefWidth="150.0" text="Begin    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+          <Label fx:id="lblBeginValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+          <Label fx:id="lblNetAmount" contentDisplay="RIGHT" prefWidth="150.0" text="Net    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+          <Label fx:id="lblNetAmountValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+          <!-- ************** for zout only ****************-->
+          <GridPane fx:id="gridPaneForZout" prefHeight="270.0" prefWidth="424.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="16">
+            <children>
+              <Label fx:id="lblCashDrop" contentDisplay="RIGHT" prefWidth="150.0" text="Cash Drop    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+              <Label fx:id="lblCashDropValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" />
+              <Label fx:id="lblCount" contentDisplay="RIGHT" prefWidth="150.0" text="Count    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+              <Label fx:id="lblCountValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+              <Label fx:id="lblOverOrShort" contentDisplay="RIGHT" prefWidth="150.0" text="Over/Short   :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+              <Label fx:id="lblOverOrShortValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+              <Label fx:id="lblLeave" contentDisplay="RIGHT" prefWidth="150.0" text="Leave    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+              <Label fx:id="lblLeaveValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+              <Label fx:id="lblDeposit" contentDisplay="RIGHT" prefWidth="150.0" text="Deposit Amount    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+              <Label fx:id="lblDepositValue" contentDisplay="RIGHT" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+              <Label fx:id="lblMediaCounts" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="MEDIA COUNTS" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+              <GridPane fx:id="currencyGrid" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" />
+              <Label fx:id="lblTotalDollar" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="Total    :" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
+              <Label fx:id="lblTotalDollarValue" contentDisplay="RIGHT" font="$x1" prefWidth="150.0" text="0000" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="18" />
+            </children>
+            <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="188.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="160.0" />
+            </columnConstraints>
+            <padding>
+              <Insets top="12.0" />
+            </padding>
+            <GridPane.margin>
+              <Insets top="30.0" />
+            </GridPane.margin>
+          </GridPane>
+        </children>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="188.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <padding>
+          <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+        </padding>
+      </GridPane>
+    </ScrollPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="64.0" prefHeight="64.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+  </rowConstraints>
+  <stylesheets>
+    <URL value="@../css/main.css" />
+  </stylesheets>
+</GridPane>

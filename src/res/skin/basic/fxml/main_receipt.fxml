@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.tecnooc.desktop.app.posx.controller.util.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" 
+            fx:id="main" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.ReceiptViewController"
+            prefWidth="800" prefHeight="520" styleClass="receipt" >
+    <children>        
+        <AnchorPane prefWidth="400" prefHeight="520" 
+                    AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="376.0" 
+                    AnchorPane.topAnchor="16.0" AnchorPane.bottomAnchor="8.0" >
+            <AnchorPane prefWidth="512" prefHeight="64"                  
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0" styleClass="header"  >
+                <children>
+                    <fx:include source="main_button_normal.fxml" fx:id="customerButton" 
+                                onAction="#searchCustomer"
+                                prefWidth="200.0" prefHeight="48.0"
+                                styleClass="icon"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    <Label fx:id="billNumberLabel" alignment="CENTER" contentDisplay="CENTER" 
+                           prefHeight="48.0" text="Bill # 648" 
+                           styleClass="bold"
+                           AnchorPane.leftAnchor="216.0" 
+                           AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="112.0" />
+                    <fx:include source="main_button_icon.fxml" fx:id="newReceiptButton" 
+                                styleClass="icon, icon-new" onAction="#startNewReceipt"
+                                AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="56.0" />
+                    <fx:include source="main_button_icon.fxml" fx:id="deleteReceiptButton" 
+                                styleClass="icon, icon-remove" onAction="#removeCurrentReceipt"
+                                AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                </children>
+            </AnchorPane>
+            
+            <TableView  prefWidth="400" prefHeight="320.0" fx:id="receiptTable" 
+                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                        AnchorPane.topAnchor="80.0" AnchorPane.bottomAnchor="80.0" 
+                        >
+                <columns>
+                    <PTableColumn fx:id="serialNoColumn" percentageWidth=".06" text="#" sortable="false" />
+                    <PTableColumn fx:id="descriptionColumn" percentageWidth=".44" text="Description" sortable="false" />
+                    <PTableColumn fx:id="quantityColumn" percentageWidth=".10" text="Qty." sortable="false" />
+                    <PTableColumn fx:id="discountColumn" percentageWidth=".10" text="Disc." sortable="false" />
+                    <PTableColumn fx:id="priceColumn" percentageWidth=".10" text="Price" sortable="false" />
+                    <PTableColumn fx:id="taxAmountColumn" percentageWidth=".10" text="Tax" sortable="false" />
+                    <PTableColumn fx:id="totalColumn" percentageWidth=".10" text="Total" sortable="false" />
+                </columns>
+            </TableView>
+            
+            <AnchorPane prefWidth="400" prefHeight="64.0" 
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                      AnchorPane.bottomAnchor="0.0"  
+                      styleClass="footer">
+                      <children>                          
+                          <Label fx:id="totalLabel" alignment="CENTER" contentDisplay="CENTER"  
+                          styleClass="bold"
+                          AnchorPane.leftAnchor="8.0" 
+                           AnchorPane.topAnchor="8.0" AnchorPane.rightAnchor="176.0"
+                           prefHeight="48.0" text="" />
+<!--                          <fx:include source="main_button_icon.fxml" fx:id="saveReceiptButton" 
+                                styleClass="icon, icon-save" onAction="#saveCurrentReceipt"
+                                AnchorPane.topAnchor="8.0" AnchorPane.rightAnchor="120.0"
+                                visible="false"  />-->
+                          <!-- <fx:include source="main_button_icon.fxml" fx:id="exportReceiptButton" 
+                                styleClass="icon, icon-pdf" onAction="#exportCurrentReceipt"
+                                AnchorPane.topAnchor="8.0" AnchorPane.rightAnchor="64.0"
+                                visible="false"  /> -->
+                                
+                          <fx:include source="main_button_icon.fxml" fx:id="saveReceiptButton" 
+                                styleClass="icon, icon-save" onAction="#saveCurrentReceipt"
+                                AnchorPane.topAnchor="8.0" AnchorPane.rightAnchor="64.0"
+                                visible="false"  />
+                          <fx:include source="main_button_icon.fxml" fx:id="printReceiptButton" 
+                                styleClass="icon, icon-print" onAction="#printCurrentReceipt"
+                                AnchorPane.topAnchor="8.0" AnchorPane.rightAnchor="8.0"
+                                visible="false"  />
+                      </children>
+            </AnchorPane>
+        </AnchorPane>
+        
+        <AnchorPane prefWidth="352.0" prefHeight="520"
+                    AnchorPane.rightAnchor="8.0" 
+                    AnchorPane.topAnchor="16.0" AnchorPane.bottomAnchor="8.0" >
+            <AnchorPane prefWidth="352.0" prefHeight="64"                  
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                  AnchorPane.topAnchor="0.0"  >
+                <children>
+                    <fx:include source="main_button_normal.fxml" fx:id="btnSearch" 
+                                onAction="#showSearchItemView"
+                                prefWidth="106.0" prefHeight="48.0"
+                                styleClass="icon" text="SEARCH" 
+                                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="8.0" />
+                    
+                    <fx:include source="main_button_normal.fxml" fx:id="btnTender" 
+                                onAction="#showTenderView"
+                                prefWidth="106.0" prefHeight="48.0"
+                                styleClass="icon" text="TENDER" 
+                                AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="8.0" />
+                    
+                    <fx:include source="main_button_normal.fxml" fx:id="holdButton" 
+                                onAction="#showHoldReceiptsView"
+                                prefWidth="108.0" prefHeight="48.0"
+                                styleClass="icon" text="~~~~" 
+                                AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="8.0" />
+                </children>
+            </AnchorPane>   
+            
+            <StackPane fx:id="detailsPane" prefWidth="352.0" prefHeight="440.0" 
+                       AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" 
+                       AnchorPane.topAnchor="80.0" AnchorPane.bottomAnchor="0.0" >
+                
+            </StackPane>
+        </AnchorPane>
+    </children>
+</AnchorPane>

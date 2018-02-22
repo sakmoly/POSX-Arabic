@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.SearchCustomerViewController"
+            prefWidth="464.0" prefHeight="384.0" >
+    <children>
+        <TextField fx:id="lookupTextField"
+                   prefWidth="432.0" prefHeight="48.0" onKeyTyped="#keyTyped" 
+                   AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" 
+                   AnchorPane.topAnchor="16.0" />
+        
+        <ListView fx:id="customerList" 
+                  prefWidth="446.0" prefHeight="232.0"
+                  AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" 
+                  AnchorPane.topAnchor="80.0" AnchorPane.bottomAnchor="16.0"  />
+    </children>
+</AnchorPane>

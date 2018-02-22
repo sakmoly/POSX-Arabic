@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:id="licenceFXML" fx:controller="com.tecnooc.posx.licence.controller.LicenceController"
+            prefHeight="600" prefWidth="600" styleClass="licence">
+    <top>
+        <FlowPane prefWidth="600" prefHeight="150" styleClass="licence-header" >
+            <children>
+                <Label prefWidth="150" prefHeight="150" styleClass="licence-logo" />
+                <Label prefWidth="450" prefHeight="150" fx:id="trialMessage" text="Thankyou for trying POSX. &#10;You can use this full-feature trial for 240 hours.&#10;&#10;Hours Remaining: 0" />
+            </children>
+        </FlowPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="450" prefWidth="600" styleClass="main" >
+            <children>
+                <Label minHeight="30" minWidth="435" fx:id="label" text="System Code"
+                       AnchorPane.leftAnchor="25" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="70" />        
+                <Button text="Save" onAction="#writeSystemCode" 
+                        minHeight="30" minWidth="100"
+                        AnchorPane.topAnchor="20" AnchorPane.rightAnchor="25" />
+                <TextArea fx:id="systemCode" minHeight="50" minWidth="550"
+                          editable="false" styleClass="read-only"
+                          AnchorPane.leftAnchor="25" AnchorPane.topAnchor="70" 
+                          AnchorPane.rightAnchor="25" AnchorPane.bottomAnchor="280" />
+        
+                <Label minHeight="30" minWidth="435" text="Product Key"
+                       AnchorPane.leftAnchor="25" AnchorPane.topAnchor="210" AnchorPane.rightAnchor="70" />        
+                <Button text="Browse" onAction="#readProductKey"
+                        minHeight="30" minWidth="100"
+                        AnchorPane.topAnchor="210" AnchorPane.rightAnchor="25" />
+                <TextArea fx:id="productKey" minHeight="50" minWidth="550"
+                          AnchorPane.leftAnchor="25" AnchorPane.topAnchor="260" 
+                          AnchorPane.rightAnchor="25" AnchorPane.bottomAnchor="90" />
+             
+                <Button text="Exit" onAction="#exit"
+                        minHeight="30" minWidth="100"
+                        AnchorPane.topAnchor="375" AnchorPane.rightAnchor="25" />             
+                <Button text="Continue Trial" onAction="#continueTrial" fx:id="continueTrialButton"
+                        minHeight="30" minWidth="150"
+                        AnchorPane.topAnchor="375" AnchorPane.rightAnchor="140" />      
+                <Button text="Activate" onAction="#activate"
+                        minHeight="30" minWidth="100"
+                        AnchorPane.topAnchor="375" AnchorPane.rightAnchor="305" />
+        
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

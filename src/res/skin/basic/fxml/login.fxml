@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<FlowPane alignment="CENTER" columnHalignment="CENTER" prefWidth="800" prefHeight="600" styleClass="login" xmlns:fx="http://javafx.com/fxml" fx:controller="com.tecnooc.desktop.app.posx.controller.impl.LoginViewController" >
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="container">
+            <children>
+                <TextField fx:id="usernameField" layoutX="438.0" layoutY="185.0" prefHeight="35.0" prefWidth="270.0" />
+                <PasswordField fx:id="passwordField" layoutX="438.0" layoutY="229.0" prefHeight="35.0" prefWidth="270.0" />
+                <Label fx:id="statusText" layoutX="438.0" layoutY="158.0" prefWidth="270.0" text="Enter Login Information" styleClass="normal" />
+                <Button fx:id="loginButton" layoutX="438.0" layoutY="286.0" defaultButton="true"  mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" text="Login" onAction="#login"  />
+            </children>
+        </AnchorPane>
+    </children>
+</FlowPane>

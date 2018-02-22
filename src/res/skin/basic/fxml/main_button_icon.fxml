@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Button minHeight="48.0" minWidth="48.0" 
+        prefHeight="48.0" prefWidth="48.0" 
+        mnemonicParsing="false" contentDisplay="CENTER"  />

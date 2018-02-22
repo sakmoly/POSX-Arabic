@@ -1,0 +1,2 @@
+Cantarell\ Regular=/res/skin/basic/fonts/Cantarell-Regular.ttf
+Cantarell\ Bold=/res/skin/basic/fonts/Cantarell-Bold.ttf
